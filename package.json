@@ -18,12 +18,29 @@
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "axios": "^1.2.2",
+    "commitizen": "^4.3.0",
     "eslint": "^8.31.0",
     "eslint-plugin-vue": "^9.8.0",
+    "husky": "4.3.0",
+    "lint-staged": "^13.1.0",
     "unplugin-auto-import": "^0.12.1",
     "unplugin-vue-components": "^0.22.12",
     "vite": "^4.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,css,vue,jsx}": [
+      "eslint",
+      "git add"
+    ]
   }
 }
