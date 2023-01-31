@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/JasonPink/vue3-vite/compare/v1.0.0...v1.1.0) (2023-01-31)
+
+
+### Features
+
+* 完善changelog ([9cc405b](https://github.com/JasonPink/vue3-vite/commit/9cc405bba24fce29f317250df9cffcd4ee7a80fe))
+
 ## 1.0.0 (2023-01-31)
 
 
