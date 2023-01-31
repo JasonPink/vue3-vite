@@ -1,14 +1,16 @@
 {
   "name": "vite-cli",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "release": "standard-version",
+    "release:first": "standard-version -r 1.0.0"
   },
   "dependencies": {
     "element-plus": "^2.2.28",
@@ -23,10 +25,12 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "axios": "^1.2.2",
     "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.31.0",
     "eslint-plugin-vue": "^9.8.0",
     "husky": "4.3.0",
     "lint-staged": "^13.1.0",
+    "standard-version": "^9.5.0",
     "unplugin-auto-import": "^0.12.1",
     "unplugin-vue-components": "^0.22.12",
     "vite": "^4.0.0"
@@ -42,5 +46,11 @@
       "eslint",
       "git add"
     ]
-  }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "standard-version": {}
 }
